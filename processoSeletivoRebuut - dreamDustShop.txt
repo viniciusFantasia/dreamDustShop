@@ -1,0 +1,7 @@
+fazer cruds das tabelas:
+
+categoria - nome
+
+produto - nome, preço, categoria
+
+Linguagem escolhida PHP
