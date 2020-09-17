@@ -24,7 +24,8 @@
         <h3>MENU</h3><br>
             <a href="cadcategoria.php">Nova Categoria</a><br><br><br>
             <a href="cadproduto.php">Novo Produto</a><br><br><br>
-            <a href="listarProdutos.php">Listagem de Produtos</a><br><br><br>
+            <a href="listarprodutos.php">Produtos Cadastrados</a><br><br><br>
+            <a href="listarcategoria.php">Categorias Existentes</a><br><br><br>
 
         <div class="footer">
             <p class="textocentralizado">Projeto desenvolvido por <strong>Vinícius Pereira Fantasia</strong></p>

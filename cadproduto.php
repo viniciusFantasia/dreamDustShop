@@ -25,12 +25,12 @@
             <label>Descrição</label><br>
             <input type="text" name="Descricao" value="" placeholder="Descrição" required><br><br>
             <label>Preço</label><br>
-            <input type="text" name="Preco" value="" placeholder="Valor" required><br><br>
+            <input type="number" name="Preco" value="" placeholder="Valor" required><br><br>
             <label>Categoria</label><br>
-            <select name="categoria">
+            <select name="IDCategoria">
             <option>Selecione uma categoria</option>
             <?php
-            $sql = "Select * from TBCategoria";
+            $sql = "SELECT * FROM TBCategoria";
             require_once "conexao.php";
             $result = $conn->query($sql);
             $select = $result->fetchAll(PDO::FETCH_ASSOC);

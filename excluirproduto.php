@@ -32,7 +32,7 @@
         }
         ?>
         <br>
-        <a href="cadproduto.php">VOLTAR</a><br><br>
+        <a href="listarprodutos.php">VOLTAR</a><br><br>
         <a href="home.php">HOME</a><br>
     </div>
 </body>

@@ -64,6 +64,7 @@
                 ?>
             </table>
         <br>
+        <a href="cadproduto.php">NOVO PRODUTO</a><br><br>
         <a href="home.php">HOME</a><br>
     </div>
 </body>

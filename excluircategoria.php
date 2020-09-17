@@ -17,7 +17,7 @@
         </div>
     </div>
     <div id="site">
-        <img id="logo" src="" alt="" />
+        <img id="logo" src="imagens/dreamdust.png" alt="" />
         <?php
         if (isset($_GET['IDCategoria'])) {
             $IDCategoria = $_GET['IDCategoria'];
@@ -33,8 +33,8 @@
         }
         ?>
         <br>
-        <a href="cadcategoria.php">Voltar</a><br><br>
-        <a href="home.php">Home</a><br>
+        <a href="listarcategoria.php">VOLTAR</a><br><br>
+        <a href="home.php">HOME</a><br>
     </div>
 </body>
 

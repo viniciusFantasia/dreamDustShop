@@ -20,24 +20,29 @@
         <img id="logo" src="imagens/dreamdust.png" alt="" />
         <h3>Editar Categoria</h3>
         <?php
-        $IDCategoria = $_GET['IDCategoria'];
-        $sql = "Select * from TBCategoria where IDCategoria=$IDCategoria";
-        require_once "conexao.php";
-        $result = $conn->query($sql);
-        $dados = $result->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($dados as $linha) { ?>
-            <form name="form1" action="editarcategoria2.php" method="POST" class="textocentralizado">
-                <br>
-                <input type="hidden" name="Categoria" value="<?php echo $linha['IDCategoria']; ?>">
-                <label>Nome</label>
-                <input type="text" name="Nome" value="<?php echo $linha['Nome']; ?>" placeholder="Digite o nome da Categoria" required><br><br>
-                <input type="submit" value="SALVAR">
-                <input type="reset" value="CANCELAR">
-            </form>
+        if (isset($_GET['IDCategoria'])) {
+            $IDCategoria = $_GET['IDCategoria'];
+            $sql = "SELECT * FROM TBCategoria WHERE IDCategoria=$IDCategoria";
+            require_once "conexao.php";
+            $result = $conn->query($sql);
+            $dados = $result->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($dados as $linha) { ?>
+                <form name="form1" action="editarcategoria2.php" method="POST" class="textocentralizado">
+                    <br>
+                    <input type="hidden" name="IDCategoria" value="<?php echo $linha['IDCategoria']; ?>">
+                    <label>Nome</label>
+                    <input type="text" name="Nome" value="<?php echo $linha['Nome']; ?>" placeholder="Digite o nome da Categoria" required><br><br>
+                    <input type="submit" value="SALVAR">
+                    <input type="reset" value="CANCELAR">
+                </form>
         <?php
+            }
+        } else {
+            echo "<p> Erro aos receber os dados!!! <p>";
         }
         ?>
         <br>
+        <a href="listarcategoria.php">VOLTAR</a><br>
         <a href="home.php">HOME</a><br>
     </div>
 </body>

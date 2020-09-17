@@ -27,9 +27,9 @@
             $Nome = $_POST['Nome'];
 
             //montar a instrução SQL
-            $sql = "update TBCategoria set 
+            $sql = "UPDATE TBCategoria SET 
                         Nome = '$Nome'
-                        where IDCategoria='$IDCategoria'";
+                        WHERE IDCategoria ='$IDCategoria'";
             //echo $sql;
             require_once "conexao.php";
             $conn->exec($sql);
@@ -39,7 +39,8 @@
         }
         ?>
         <br>
-        <a href="cadcategoria.php">Voltar</a><br>
+        <a href="listarcategoria.php">VOLTAR</a><br>
+        <a href="home.php">HOME</a><br>
     </div>
 </body>
 

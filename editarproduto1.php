@@ -41,9 +41,9 @@
                     <label>Descrição</label>
                     <input type="text" name="Descricao" value="<?php echo $linha['Descricao']; ?>" placeholder="Digite a Descrição" required><br><br>
                     <label>Preço</label>
-                    <input type="text" name="Preco" value="<?php echo $linha['Preco']; ?>" placeholder="Digite o Valor" required><br><br>
+                    <input type="number" name="Preco" value="<?php echo $linha['Preco']; ?>" placeholder="Digite o Valor" required><br><br>
                     <label>Categoria</label><br>
-                    <select name="categoria">
+                    <select name="IDCategoria">
                     <?php
                     $sql2 = "SELECT IDCategoria,
                                     Nome
@@ -61,10 +61,12 @@
                 </form>
         <?php
             }
+        } else {
+            echo "<p> Erro aos receber os dados!!! <p>";
         }
         ?>
         <br>
-        <a href="cadproduto.php">VOLTAR</a><br><br>
+        <a href="listarprodutos.php">VOLTAR</a><br><br>
         <a href="home.php">HOME</a><br>
     </div>
 </body>

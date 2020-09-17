@@ -12,20 +12,20 @@
 <body class="textocentralizado">
     <div id="fundo-externo">
         <div id="fundo">
-            <img src="imagens/dreamdust.png" alt="" />
+            <img src="" alt="" />
         </div>
     </div>
     <div id="site">
-        <img id="logo" src="" alt="" />
+        <img id="logo" src="imagens/dreamdust.png" alt="" />
         <h3>Nova Categoria</h3>
         <?php
         if (
-            isset($_POST['NOME'])
+            isset($_POST['Nome'])
         ) {
             $Nome = $_POST['Nome'];
 
             //montar a instrução SQL
-            $sql = "insert into TBCategoria (Nome) 
+            $sql = "INSERT INTO TBCategoria (Nome) 
                                 values('$Nome')";
             //  echo $sql;
             require_once "conexao.php";

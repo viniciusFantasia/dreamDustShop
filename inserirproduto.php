@@ -29,7 +29,7 @@
             $IDCategoria = $_POST['IDCategoria'];
 
             //montar a instrução SQL
-            $sql = "insert into TBProtudo (Nome,Descricao,Preco,IDCategoria) 
+            $sql = "INSERT INTO TBProduto (Nome,Descricao,Preco,IDCategoria) 
          values('$Nome','$Descricao','$Preco','$IDCategoria')";
             //echo $sql;
             require_once "conexao.php";
@@ -40,6 +40,7 @@
         }
         ?>
         <br>
+        <a href="cadproduto.php">VOLTAR</a><br><br><br>
         <a href="home.php">HOME</a><br><br>
     </div>
 </body>
