@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Lista de Produtos</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div id="site">
-        <img id="logo" src="" alt="" />
+        <img id="logo" src="imagens/dreamdust.png" alt="" />
             <br>
             <h3>Lista de Produtos</h3>
             <table>
@@ -36,6 +36,9 @@
                     <th>
                         Categoria
                     </th>
+                    <th>
+                        Ações
+                    </th>
                 </tr>
                 <?php
                 $sql = "SELECT p.IDProduto IDProduto,
@@ -54,7 +57,9 @@
                 foreach ($dados as $linha) {
                     echo "<tr><td>" . $linha["IDProduto"] . "</td><td>" . $linha["Nome"] . "</td><td> " . $linha["Descricao"] . "</td>" .
                         "<td>" . $linha["Preco"] . "</td><td>" . $linha["Categoria"] . "</td>" .
-                        "</tr>";
+                        "<td><a href='editarproduto1.php?IDProduto=" . $linha["IDProduto"] 
+                        ."'>EDITAR</a><a href='excluirproduto.php?IDProduto=" . $linha["IDProduto"] . "'>DELETAR</a></td>".
+                        "</tr>"; 
                 }
                 ?>
             </table>

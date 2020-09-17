@@ -2,6 +2,6 @@ fazer cruds das tabelas:
 
 categoria - nome
 
-produto - nome, preço, categoria
+produto - nome, preço, descrição, categoria
 
 Linguagem escolhida PHP
